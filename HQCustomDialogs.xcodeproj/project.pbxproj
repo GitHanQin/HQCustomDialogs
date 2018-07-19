@@ -14,6 +14,9 @@
 		A1002D0F21006B3E000A395C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1002D0D21006B3E000A395C /* LaunchScreen.storyboard */; };
 		A1002D1A21006B3E000A395C /* HQCustomDialogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1002D1921006B3E000A395C /* HQCustomDialogsTests.swift */; };
 		A1002D2521006B3E000A395C /* HQCustomDialogsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1002D2421006B3E000A395C /* HQCustomDialogsUITests.swift */; };
+		A1002D3521006D0C000A395C /* HQCustomDialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1002D3321006D0C000A395C /* HQCustomDialogs.swift */; };
+		A1002D3621006D0C000A395C /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1002D3421006D0C000A395C /* PopoverViewController.swift */; };
+		A1002D3821006D4D000A395C /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1002D3721006D4D000A395C /* ExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		A1002D2021006B3E000A395C /* HQCustomDialogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HQCustomDialogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1002D2421006B3E000A395C /* HQCustomDialogsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCustomDialogsUITests.swift; sourceTree = "<group>"; };
 		A1002D2621006B3E000A395C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1002D3321006D0C000A395C /* HQCustomDialogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQCustomDialogs.swift; sourceTree = "<group>"; };
+		A1002D3421006D0C000A395C /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		A1002D3721006D4D000A395C /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 		A1002D0321006B3C000A395C /* HQCustomDialogs */ = {
 			isa = PBXGroup;
 			children = (
+				A1002D3221006CA4000A395C /* HQCustomDialogs */,
+				A1002D3721006D4D000A395C /* ExampleViewController.swift */,
 				A1002D0421006B3C000A395C /* AppDelegate.swift */,
 				A1002D0621006B3C000A395C /* ViewController.swift */,
 				A1002D0821006B3C000A395C /* Main.storyboard */,
@@ -123,6 +131,15 @@
 				A1002D2621006B3E000A395C /* Info.plist */,
 			);
 			path = HQCustomDialogsUITests;
+			sourceTree = "<group>";
+		};
+		A1002D3221006CA4000A395C /* HQCustomDialogs */ = {
+			isa = PBXGroup;
+			children = (
+				A1002D3321006D0C000A395C /* HQCustomDialogs.swift */,
+				A1002D3421006D0C000A395C /* PopoverViewController.swift */,
+			);
+			path = HQCustomDialogs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1002D3621006D0C000A395C /* PopoverViewController.swift in Sources */,
+				A1002D3521006D0C000A395C /* HQCustomDialogs.swift in Sources */,
 				A1002D0721006B3C000A395C /* ViewController.swift in Sources */,
 				A1002D0521006B3C000A395C /* AppDelegate.swift in Sources */,
+				A1002D3821006D4D000A395C /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

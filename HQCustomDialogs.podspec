@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HQCustomDialogs"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "HQCustomDialogs withSwift"
 
   # This description is used to generate tags and improve search results.
@@ -93,8 +93,8 @@ This is a simple and practical shrink-wrapped cartridge that allows you to custo
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "HQCustomDialogs", "HQCustomDialogs/HQCustomDialogs/*"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "HQCustomDialogs/HQCustomDialogs/*"
+  #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 

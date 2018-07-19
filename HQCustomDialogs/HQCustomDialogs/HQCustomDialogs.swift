@@ -9,30 +9,30 @@
 import UIKit
 
 //自定义转场
-let HQCustomDialogsDidPresented = "HQCustomDialogsDidPresented"
-let HQCustomDialogsDidDismiss = "HQCustomDialogsDidDismiss"
+public let HQCustomDialogsDidPresented = "HQCustomDialogsDidPresented"
+public let HQCustomDialogsDidDismiss = "HQCustomDialogsDidDismiss"
 
 //转场方向
-enum HQPresentDeriction {
+public enum HQPresentDeriction {
     case Left
     case Right
     case Top
     case Bottom
 }
-class HQCustomDialogs: NSObject,UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning {
+ class HQCustomDialogs: NSObject,UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning {
     //MARK:-UIViewControllerTransitioningDelegate
     
     ///记录当前是展开还是消失
     private var present = false
     //该方法用于返回一个负责转场动画对象的尺寸
     //保存菜单的尺寸
-    var presentFrame = CGRect.zero
+    public var presentFrame = CGRect.zero
     //点击背景是否收回
-    var isCoverEnlable:Bool = true
+    public var isCoverEnlable:Bool = true
     //弹出方向
-    var prsentDeriction:HQPresentDeriction = .Top
+    public var prsentDeriction:HQPresentDeriction = .Top
     //背景颜色
-    var backGrougdColor:UIColor = UIColor.init(white: 0.5, alpha: 0.5)
+    public var backGrougdColor:UIColor = UIColor.init(white: 0.5, alpha: 0.5)
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         let pc = PopoverViewController.init(presentedViewController: presented, presenting: presenting)

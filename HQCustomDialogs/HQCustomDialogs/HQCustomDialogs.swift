@@ -19,7 +19,7 @@ public enum HQPresentDeriction {
     case Top
     case Bottom
 }
- class HQCustomDialogs: NSObject,UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning {
+public class HQCustomDialogs: NSObject,UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning {
     //MARK:-UIViewControllerTransitioningDelegate
     
     ///记录当前是展开还是消失
@@ -34,7 +34,7 @@ public enum HQPresentDeriction {
     //背景颜色
     public var backGrougdColor:UIColor = UIColor.init(white: 0.5, alpha: 0.5)
     
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         let pc = PopoverViewController.init(presentedViewController: presented, presenting: presenting)
         pc.coverButton.isEnabled = isCoverEnlable
         pc.presentFrame =  presentFrame
@@ -42,14 +42,14 @@ public enum HQPresentDeriction {
         return pc
     }
     //该方法用于返回一个负责转场如何出现的对象
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         //发送一个通知给按钮状态发生了改变
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: HQCustomDialogsDidPresented), object: self)
         present = true
         return self
     }
     //该方法用于返回一个负责转场如何消失的对象
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         present = false
         //发送一个通知给按钮状态发生了改变
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: HQCustomDialogsDidDismiss), object: self)
@@ -57,11 +57,11 @@ public enum HQPresentDeriction {
     }
     //MARK: - UIPresentationController
     //告诉系统展现和消失的时长
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.2
     }
     //告诉该系统是如何展现和消失的，如我实现这个代理方法系统就不会添加默认的动画，所有的动画需要自己实现
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         //判断是展现还是消失
         if present == true {
             //viewController
